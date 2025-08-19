@@ -1,4 +1,4 @@
-# Smart_Energy_Monitoring_for_Hospitals
+# Smart_Energy_Monitoring
 
 # Project Title
 *Smart Energy Monitoring for Indian Hospitals*
