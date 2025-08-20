@@ -17,6 +17,16 @@ Due to ineffective HVAC control, lighting, and machine idle, Indian hospitals fr
 The goal of this research was to enable focused interventions by measuring and analysing consumption in real time.
 
 
+| **Module**                                            | **Application in Project**                                                                             |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------                           |
+| **Computer Programming and Problem Solving**          | Arduino coding in C/Embedded C, Python for data analysis, MATLAB scripts for simulations.              |
+| **English for Engineers – I**                         | Technical documentation, report writing, and presentation of project findings.                         |
+| **Multivariable Calculus and Differential Equations** | Modeling energy consumption patterns, load variation, and analyzing HVAC dynamics.                     |
+| **Engineering Graphics**                              | Drafting the layout of hospital wards, sensor placements, and circuit diagrams.                        |
+| **Workshop Practice**                                 | Assembling circuits, soldering sensors, and creating hardware prototypes.                              |
+| **Modern Physics**                                    | Understanding sensor physics (CT sensors, electromagnetic induction) for accurate current measurement. |
+
+
 ## ⚙️ Methodology
 Arduino Uno with CT sensors for current measurement
 
