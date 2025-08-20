@@ -57,4 +57,10 @@ Simulation using Tamil Nadu Electricity Board tariff data
 - Identified 15% potential savings by rescheduling HVAC and lighting loads
 
 - Visualized hourly energy consumption in MATLAB
+- 
+## Contact  
+For questions, collaboration, or feedback, please contact:  
+**Sammeta Dinesh Kumar** — [sammetadineshkumar@gmail.com]
+- 🌐 [Portfolio](https://dineshsammeta1234.github.io/)  
+- 🔗 [LinkedIn](https://www.linkedin.com/in/dineshsammeta)   
 
