@@ -16,7 +16,7 @@ Constructed a low-cost, Internet of Things-based system to monitor and optimise
 Due to ineffective HVAC control, lighting, and machine idle, Indian hospitals frequently waste energy. 
 The goal of this research was to enable focused interventions by measuring and analysing consumption in real time.
 
-
+## Modules Covered
 | **Module**                                            | **Application in Project**                                                                             |
 | ----------------------------------------------------- | ----------------------------------------------------------------------------------------                           |
 | **Computer Programming and Problem Solving**          | Arduino coding in C/Embedded C, Python for data analysis, MATLAB scripts for simulations.              |
