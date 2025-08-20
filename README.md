@@ -6,7 +6,6 @@
 ## 📅 Project Timeline
 **Duration:** Auguest 2010 – October  2010  
 **Location:** VIT University, Vellore, India  
-**Modules Used:** EEE105 – Basic Electrical Engineering, PHY101 – Modern Physics
 
 ## 📌 Objective
 Constructed a low-cost, Internet of Things-based system to monitor and optimise energy consumption in a hospital ward in India, minimising waste and peak load.
