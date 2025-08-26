@@ -10,13 +10,13 @@
 MCP342x adc(ADC_ADDRESS);
 ESP8266WebServer server(80);
 
-// Calibration and measurement values
+// Calibration and measurement values of records
 long offset = 523;
 long divider = 3805;
 long voltage = 230;
 long lastAdc = 0;
 
-// Function to read ADC value
+// Function to read ADC value to evaluate 
 long getAdc() {
   long value = 0;
   MCP342x::Config status;
@@ -25,7 +25,7 @@ long getAdc() {
   return value;
 }
 
-// Web page
+// simple Web page to get and view records
 void handleRoot() {
   lastAdc = getAdc();
   float current = (float)(lastAdc - offset) / divider;
