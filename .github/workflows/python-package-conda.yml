@@ -36,7 +36,6 @@ jobs:
         run: |
           python - <<EOF
 import sys
-import types
 import serial
 import time
 import os
