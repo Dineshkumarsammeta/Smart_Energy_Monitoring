@@ -5,10 +5,35 @@
 
 ## 📅 Project Timeline
 **Duration:** Auguest 2010 – October  2010  
-**Location:** VIT University, Vellore, India  
+**Location:** VIT University, Vellore, India 
+
 
 ## 📌 Objective
 Constructed a low-cost, Internet of Things-based system to monitor and optimise energy consumption in a hospital ward in India, minimising waste and peak load.
+
+⚠️ Disclaimer
+
+The RS485 serial communication code in this project communicates with particular hardware devices that are attached to a serial port (/dev/ttyUSB0).
+
+Crucial Information:
+
+For the code to function properly, an RS485 adapter or other appropriate device must be attached.
+
+Running this code in Continuous Integration (CI) will probably fail since CI systems, including GitHub Actions, are unable to access actual hardware.
+
+The repository is kept open to the public for demonstration and instructional purposes in order to highlight:
+
+Python (pyserial) handling of serial communication
+
+Methods for data gathering and logging
+
+Workflow example for tasks involving hardware
+
+Suggestion:
+
+The script must be executed on a local computer with the relevant RS485 hardware attached in order to function properly.
+
+To replicate hardware input without the need for real devices, think about mocking the serial interface for automated runs or continuous integration testing.
 
 
 ## 🏥 Background & Relevance
