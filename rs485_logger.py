@@ -3,7 +3,7 @@ import time
 import csv
 import os
 
-# Configuration
+# Configuration of port
 SERIAL_PORT = '/dev/ttyUSB0'  # Replace with your RS485 adapter's port
 BAUDRATE = 9600
 TIMEOUT = 1  # Seconds to wait for data
