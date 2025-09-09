@@ -1,4 +1,4 @@
-name: RS485 Script CI
+name: Smart Energy Monitoring CI
 
 on:
   push:
@@ -7,31 +7,53 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  run-ci:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout repository
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # Step 2: Setup Python
       - name: Setup Python 3.11
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyserial
+          pip install -r requirements.txt
+          pip install pytest matplotlib pandas
 
-      - name: Create log folder
-        run: mkdir -p rs485_logs
+      # Step 4: Create folders
+      - name: Create required folders
+        run: |
+          mkdir -p rs485_logs
+          mkdir -p plots
+          mkdir -p data
 
-      - name: Run RS485 script (mocked)
-        run: python mock_rs485.py
-      - name: Set up Conda
-        uses: conda-incubator/setup-miniconda@v3
+      # Step 5: Run mock RS-485 logger test
+      - name: Run mock logger test
+        run: |
+          pytest tests/test_mock_logger.py
+
+      # Step 6: Replay synthetic CSV
+      - name: Replay synthetic CSV
+        run: python src/replay_logger.py
+
+      # Step 7: Generate PNG chart from CSV
+      - name: Generate load chart
+        run: python plots/generate_plot.py
+
+      # Step 8: Upload artifacts (CSV + PNG)
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
         with:
-          activate-environment: ml-house-prices
-          environment-file: environment.yml
-          python-version: 3.11
+          name: metrics-artifacts
+          path: |
+            rs485_logs/
+            plots/
+            data/sample.csv
