@@ -29,3 +29,9 @@ jobs:
 
       - name: Run RS485 script (mocked)
         run: python mock_rs485.py
+      - name: Set up Conda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: ml-house-prices
+          environment-file: environment.yml
+          python-version: 3.11
