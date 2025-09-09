@@ -11,44 +11,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository
+      # Step 1: Checkout repo
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 2: Setup Python
-      - name: Setup Python 3.11
-        uses: actions/setup-python@v4
+      # Step 2: Install Miniconda
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v3
         with:
-          python-version: '3.11'
+          auto-update-conda: true
+          python-version: 3.11
+          environment-file: environment.yml
+          activate-environment: smart-energy
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pytest matplotlib pandas
-
-      # Step 4: Create folders
+      # Step 3: Create folders
       - name: Create required folders
         run: |
           mkdir -p rs485_logs
           mkdir -p plots
           mkdir -p data
 
-      # Step 5: Run mock RS-485 logger test
+      # Step 4: Run mock RS-485 logger test
       - name: Run mock logger test
         run: |
           pytest tests/test_mock_logger.py
 
-      # Step 6: Replay synthetic CSV
+      # Step 5: Replay synthetic CSV
       - name: Replay synthetic CSV
         run: python src/replay_logger.py
 
-      # Step 7: Generate PNG chart from CSV
+      # Step 6: Generate PNG chart from CSV
       - name: Generate load chart
         run: python plots/generate_plot.py
 
-      # Step 8: Upload artifacts (CSV + PNG)
+      # Step 7: Upload artifacts (CSV + PNG)
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
