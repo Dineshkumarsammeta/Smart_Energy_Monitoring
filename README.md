@@ -35,6 +35,15 @@ The script must be executed on a local computer with the relevant RS485 hardware
 
 To replicate hardware input without the need for real devices, think about mocking the serial interface for automated runs or continuous integration testing.
 
+## 📊 Repository Health
+
+This project is under continuous improvement.  
+An [Audit Report](../../issues/1) has been created to track repository health and enhancements:  
+- Releases & versioning (to be added)  
+- Expanded test coverage (planned with `pytest`)  
+- Metrics/artifacts integration (CSV/PNG export in CI)  
+
+
 
 ## 🏥 Background & Relevance
 Due to ineffective HVAC control, lighting, and machine idle, Indian hospitals frequently waste energy. 
