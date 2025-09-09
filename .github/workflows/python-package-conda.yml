@@ -16,14 +16,15 @@ jobs:
         uses: actions/checkout@v4
 
       # Step 2: Setup Miniconda and create env from environment.yml
+    
       - name: Setup Miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
-          auto-update-conda: true
-          environment-file: environment.yml
-          activate-environment: smart-energy
-          python-version: 3.11
-          use-mamba: true      # faster and more reliable dependency solver
+            auto-update-conda: true
+            environment-file: environment.yml
+            activate-environment: smart-energy
+            use-mamba: true
+
 
       # Step 3: Verify conda environment
       - name: Verify environment
