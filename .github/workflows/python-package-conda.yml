@@ -15,37 +15,38 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 2: Install Miniconda
+      # Step 2: Setup Miniconda and create env from environment.yml
       - name: Setup Miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
-          python-version: 3.11
           environment-file: environment.yml
           activate-environment: smart-energy
+          python-version: 3.11
+          use-mamba: true      # faster and more reliable dependency solver
 
-      # Step 3: Create folders
-      - name: Create required folders
+      # Step 3: Verify conda environment
+      - name: Verify environment
+        run: conda info && conda list
+
+      # Step 4: Create required folders
+      - name: Create folders
         run: |
-          mkdir -p rs485_logs
-          mkdir -p plots
-          mkdir -p data
+          mkdir -p rs485_logs plots data
 
+      # Step 5: Run mock RS-485 logger test
       - name: Run mock logger test
-        run: |
-          conda activate smart-energy
-          conda install -y pytest   # Install pytest in the CI environment
-          pytest tests/test_mock_logger.py
+        run: pytest tests/test_mock_logger.py
 
-      # Step 5: Replay synthetic CSV
+      # Step 6: Replay synthetic CSV
       - name: Replay synthetic CSV
         run: python src/replay_logger.py
 
-      # Step 6: Generate PNG chart from CSV
+      # Step 7: Generate PNG chart
       - name: Generate load chart
         run: python plots/generate_plot.py
 
-      # Step 7: Upload artifacts (CSV + PNG)
+      # Step 8: Upload artifacts
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
