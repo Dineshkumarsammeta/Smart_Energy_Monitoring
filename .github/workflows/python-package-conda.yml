@@ -31,9 +31,10 @@ jobs:
           mkdir -p plots
           mkdir -p data
 
-      # Step 4: Run mock RS-485 logger test
       - name: Run mock logger test
         run: |
+          conda activate smart-energy
+          conda install -y pytest   # Install pytest in the CI environment
           pytest tests/test_mock_logger.py
 
       # Step 5: Replay synthetic CSV
