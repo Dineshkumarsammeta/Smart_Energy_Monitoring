@@ -23,6 +23,9 @@ jobs:
           environment-file: environment.yml
           activate-environment: smart-energy
           use-mamba: true   # faster solver
+          force: true 
+      - name: Debug Conda
+        run: conda env create --file environment.yml --name smart-energy --dry-run
 
       # Step 3: Verify environment
       - name: Verify environment
