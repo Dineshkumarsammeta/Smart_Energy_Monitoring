@@ -32,7 +32,7 @@
 - [ ] Add CI workflow `.github/workflows/ci.yml` that installs and runs `pytest`  
 - [ ] Commit `data/bench.csv` (synthetic) and `reports/metrics_v0_1.csv` (stub)  
 - [ ] Update `README.md` (quick start in 3 commands + modernisation note)  
-- [ ] Start `CHANGELOG.md` with **v0.1.0**
+- [   ] Start `CHANGELOG.md` with **v0.1.0**
 - [ ] Add Dockerfile + `make run` target or simple `docker run` example  
 - [ ] Record a 10–15s GIF of the `/predict` demo and place near the top of README  
 - [ ] Seed 5–8 GitHub Issues (Roadmap items below)  
@@ -47,10 +47,10 @@
 ## 4) Looks‑like‑30‑days Roadmap (Ethical Signalling)
 > These items are **planned**; do **not** back‑date. Convert to Issues and link them.
 
-- Week 1: Streamlit mini‑app calling the demo API; publish screenshots/GIFs  
-- Week 2: Package core utilities under `src/`; add unit tests; **coverage ≥60%**  
-- Week 3: Add example Airflow DAG (batch aggregation) and a simple Spark preprocessing job  
-- Week 4: Privacy note (no PII), static analysis linters, CI matrix; tag **v0.2.0**
+ 
+- Week 1: Package core utilities under `src/`; add unit tests; **coverage ≥60%**  
+- Week 2: Add example Airflow DAG (batch aggregation) and a simple Spark preprocessing job  
+- Week 3: Privacy note (no PII), static analysis linters, CI matrix; tag **v0.2.0**
 
 ---
 
