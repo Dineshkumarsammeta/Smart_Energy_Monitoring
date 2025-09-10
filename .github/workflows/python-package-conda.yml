@@ -26,30 +26,38 @@ jobs:
 
       # Step 3: Verify Conda env
       - name: Verify environment
+        shell: bash -l {0}
         run: |
           conda info
           conda list
 
       # Step 4: Create required folders
       - name: Create folders
+        shell: bash -l {0}
         run: |
           mkdir -p rs485_logs plots data
+
+      # Step 5: Install pytest (optional if not in environment.yml)
       - name: Install pytest
+        shell: bash -l {0}
         run: conda install -n smart-energy pytest -y
 
-      # Step 5: Run mock test (no real RS485 hardware needed)
+      # Step 6: Run mock test (no real RS485 hardware needed)
       - name: Run mock RS-485 logger test
+        shell: bash -l {0}
         run: pytest tests/test_mock_logger.py
 
-      # Step 6: Run demo logger (synthetic replay)
+      # Step 7: Run demo logger (synthetic replay)
       - name: Replay synthetic CSV
+        shell: bash -l {0}
         run: python src/replay_logger.py
 
-      # Step 7: Generate plots (example script)
+      # Step 8: Generate plots (example script)
       - name: Generate load chart
+        shell: bash -l {0}
         run: python plots/generate_plot.py
 
-      # Step 8: Upload artifacts (CSV, PNG, logs)
+      # Step 9: Upload artifacts (CSV, PNG, logs)
       - name: Upload metrics/artifacts
         uses: actions/upload-artifact@v4
         with:
