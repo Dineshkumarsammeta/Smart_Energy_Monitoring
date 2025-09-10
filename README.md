@@ -94,6 +94,6 @@ Simulation using Tamil Nadu Electricity Board tariff data
 ## Contact  
 For questions, collaboration, or feedback, please contact:  
 **Sammeta Dinesh Kumar** — [sammetadineshkumar@gmail.com]
-- 🌐 [Portfolio](https://dineshsammeta1234.github.io/)  
+- 🌐 [Portfolio](https://dineshkumarsammeta.github.io/)  
 - 🔗 [LinkedIn](https://www.linkedin.com/in/dineshsammeta)   
 
