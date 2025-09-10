@@ -24,7 +24,7 @@
 
 ---
 
-## 3) Day 1 — Checklist (Do now)
+## 3)Checklist
 - [ ] Add `pyproject.toml` with modern deps; heavy tools (Airflow/Spark/LLM) as optional extras `.[pipeline]`  
 - [ ] Add `.env.template` and `.gitignore`  
 - [ ] Create `app/demo_api.py` with `/health` and `/predict` (mock sentiment/flag)  
@@ -33,24 +33,18 @@
 - [ ] Commit `data/bench.csv` (synthetic) and `reports/metrics_v0_1.csv` (stub)  
 - [ ] Update `README.md` (quick start in 3 commands + modernisation note)  
 - [ ] Start `CHANGELOG.md` with **v0.1.0**
-
-**Acceptance criteria (Day 1):**  
-✅ `pip install -e .` works • ✅ `pytest -q` passes • ✅ `/health` returns `{"status":"ok"}` • ✅ metrics CSV present • ✅ README quick‑start copy‑ready
-
----
-
-## 4) Day 2 — Checklist (Polish)
 - [ ] Add Dockerfile + `make run` target or simple `docker run` example  
 - [ ] Record a 10–15s GIF of the `/predict` demo and place near the top of README  
 - [ ] Seed 5–8 GitHub Issues (Roadmap items below)  
 - [ ] Create first release/tag: **v0.1.0**
 
-**Acceptance criteria (Day 2):**  
+**Acceptance criteria :**  
+✅ `pip install -e .` works • ✅ `pytest -q` passes • ✅ `/health` returns `{"status":"ok"}` • ✅ metrics CSV present • ✅ README quick‑start copy‑ready
 ✅ Docker image builds • ✅ README shows GIF • ✅ First release tagged with short notes
 
 ---
 
-## 5) Looks‑like‑30‑days Roadmap (Ethical Signalling)
+## 4) Looks‑like‑30‑days Roadmap (Ethical Signalling)
 > These items are **planned**; do **not** back‑date. Convert to Issues and link them.
 
 - Week 1: Streamlit mini‑app calling the demo API; publish screenshots/GIFs  
@@ -60,7 +54,7 @@
 
 ---
 
-## 6) Evidence Snapshots
+## 5) Evidence Snapshots
 | Version | Metric | Value | Notes |
 |---|---|---|---|
 | v0.1.0 | latency_p50_ms | 42 | Demo API on laptop |
@@ -71,7 +65,7 @@
 
 ---
 
-## 7) NHS Relevance (Talking Points)
+## 6) NHS Relevance (Talking Points)
 - **Reliability & repeatability:** env pins, CI, smoke tests, and deterministic synthetic data.  
 - **Supportability:** README quick‑start, CHANGELOG, Issues as a public backlog.  
 - **Operational thinking:** basic latency/throughput measurements and a plan for metrics.  
@@ -79,13 +73,13 @@
 
 ---
 
-## 8) Decisions & Assumptions Log
+## 7) Decisions & Assumptions Log
 - **2025‑09‑09:** Use synthetic `bench.csv` with 15‑minute intervals; tariff placeholder £0.18/kWh.  
 - **2025‑09‑09:** Demo API returns mock sentiment/flags; real model is out of scope for v0.1.0.
 
 ---
 
-## 9) Risk Register (tracked)
+## 8) Risk Register (tracked)
 | Risk | Likelihood | Impact | Mitigation | Owner | Status |
 |---|---|---|---|---|---|
 | Missing original data | High | Medium | Use synthetic bench + document clearly | DKS | Open |
@@ -94,6 +88,6 @@
 
 ---
 
-## 10) Footer
+## 9) Footer
 **Last updated:** 09 Sep 2025 10:00  
 **Contact:** Dinesh Kumar Sammeta (Repo owner)
