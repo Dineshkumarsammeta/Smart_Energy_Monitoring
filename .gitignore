@@ -12,11 +12,13 @@ __pycache__/
 .venv/
 env/
 venv/
+.conda/
+conda_envs/
 
 # Jupyter
 .ipynb_checkpoints/
 
-# Data and Logs
+# Data and Logs (ignored in Git, but uploaded via CI artifacts)
 rs485_logs/
 data/
 plots/
