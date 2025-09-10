@@ -16,7 +16,8 @@ Constructed a low-cost, Internet of Things-based system to monitor and optimise
 ⚠️ Disclaimer
 
 This project was originally built in 2010 as part of academic research at VIT University. which is part time project.
-In 2025, it has been refreshed for modernization and archival purposes — preserving the legacy work while adding reproducibility, documentation, and continuous integration (CI) examples.
+
+Modernisation note: This project was originally built in Aug–Oct 2010. In Sep 2025, I uploaded the code to GitHub and refreshed it to run on current tooling (Python 3.11; added mock‑based tests, CI and metrics). Commit dates reflect publication/cleanup, not the original build period.
 
 The RS485 serial communication code in this project communicates with particular hardware devices that are attached to a serial port (/dev/ttyUSB0).
 
@@ -39,6 +40,7 @@ Suggestion:
 The script must be executed on a local machine with the relevant RS485 hardware attached in order to function properly.
 
 To replicate hardware input without requiring real devices, consider mocking the serial interface for automated runs or CI testing.
+
 ## 📊 Repository Health
 
 This project is under continuous improvement.  
@@ -75,6 +77,18 @@ MATLAB Simulink model for load profile analysis
 
 Simulation using Tamil Nadu Electricity Board tariff data
 
+## ⚡ Quick Start — Run in 3 Commands
+
+1. **Create & activate environment**  
+   ```bash
+   conda env create -f environment.yml
+   conda activate smart-energy
+2. **Run the demo pipeline**
+   python demo/demo_signal_pipeline.py
+
+3. **View generated plots and metrics**
+   Plots: results/plots/
+   Metrics CSV: results/metrics.csv
 
 ## 📂 Data Sources
 - **Source 1:** Bureau of Energy Efficiency (BEE) Hospital Audit Reports 2010 – India -  https://www.beeindia.gov.in/ergydata.php
@@ -94,7 +108,7 @@ Simulation using Tamil Nadu Electricity Board tariff data
 - Identified 15% potential savings by rescheduling HVAC and lighting loads
 
 - Visualized hourly energy consumption in MATLAB
-- 
+
 ## Contact  
 For questions, collaboration, or feedback, please contact:  
 **Sammeta Dinesh Kumar** — [sammetadineshkumar@gmail.com]
