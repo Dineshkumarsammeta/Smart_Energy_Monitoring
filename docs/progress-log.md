@@ -32,7 +32,7 @@
 - [ ] Add CI workflow `.github/workflows/ci.yml` that installs and runs `pytest`  
 - [ ] Commit `data/bench.csv` (synthetic) and `reports/metrics_v0_1.csv` (stub)  
 - [ ] Update `README.md` (quick start in 3 commands + modernisation note)  
-- [   ] Start `CHANGELOG.md` with **v0.1.0**
+- [ ] Start `CHANGELOG.md` with **v0.1.0**
 - [ ] Add Dockerfile + `make run` target or simple `docker run` example  
 - [ ] Record a 10–15s GIF of the `/predict` demo and place near the top of README  
 - [ ] Seed 5–8 GitHub Issues (Roadmap items below)  
