@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+*.log
+
+# Virtual Environments
+.env
+.venv/
+env/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data and Logs
+rs485_logs/
+data/
+plots/
+*.csv
+*.xlsx
+*.xls
+*.png
+*.pdf
+
+# MATLAB
+*.asv
+*.m~
+*.mat
+*.fig
+
+# Arduino / Embedded
+*.hex
+*.elf
+
+# Conda / Pip
+*.conda
+*.yaml
+*.lock
+
+# IDE / Editors
+.vscode/
+.idea/
+.DS_Store
+
+# OS generated
+Thumbs.db
