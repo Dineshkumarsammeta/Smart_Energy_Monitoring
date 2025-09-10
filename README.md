@@ -107,6 +107,7 @@ Simulation using Tamil Nadu Electricity Board tariff data
 ## 📊 Results
 - Identified 15% potential savings by rescheduling HVAC and lighting loads
 - <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/b6783a38-944e-4428-823b-943f4fc6dd1d" />
+<img width="982" height="662" alt="image" src="https://github.com/user-attachments/assets/aa727676-29fd-4796-8d15-67e644869eea" />
 
 
 - Visualized hourly energy consumption in MATLAB
