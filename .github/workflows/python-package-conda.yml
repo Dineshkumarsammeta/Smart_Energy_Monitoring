@@ -15,16 +15,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 2: Setup Python (replace with Conda if you prefer)
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      # Step 2: Setup Miniconda
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v3
         with:
+          activate-environment: smart-energy
+          environment-file: environment.yml
           python-version: "3.11"
+          auto-activate-base: false
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
+      # Step 3: Verify Conda env
+      - name: Verify environment
         run: |
-          pip install -r requirements.txt
+          conda info
+          conda list
 
       # Step 4: Create required folders
       - name: Create folders
