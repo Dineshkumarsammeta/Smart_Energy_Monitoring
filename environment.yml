@@ -1,15 +1,12 @@
 name: smart-energy
 channels:
   - defaults
+  - conda-forge
 dependencies:
   - python=3.11
   - numpy
   - pandas
   - matplotlib
-  - seaborn
   - pyserial
-  - scikit-learn
-  - pytest
-  - pip
-  - pip:
-      - textblob
+  - scipy
+  - pytest       
