@@ -11,35 +11,44 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout repository
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v3
+      # Step 2: Setup Python (replace with Conda if you prefer)
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          auto-update-conda: true
-          environment-file: environment.yml
-          activate-environment: smart-energy
-          use-mamba: true
-          force: true
+          python-version: "3.11"
 
-      - name: Create required folders
-        run: mkdir -p rs485_logs plots data
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
 
-      - name: Run mock logger test
-        run: conda run -n smart-energy pytest tests/test_mock_logger.py
+      # Step 4: Create required folders
+      - name: Create folders
+        run: |
+          mkdir -p rs485_logs plots data
 
+      # Step 5: Run mock test (no real RS485 hardware needed)
+      - name: Run mock RS-485 logger test
+        run: pytest tests/test_mock_logger.py
+
+      # Step 6: Run demo logger (synthetic replay)
       - name: Replay synthetic CSV
-        run: conda run -n smart-energy python src/replay_logger.py
+        run: python src/replay_logger.py
 
+      # Step 7: Generate plots (example script)
       - name: Generate load chart
-        run: conda run -n smart-energy python plots/generate_plot.py
+        run: python plots/generate_plot.py
 
+      # Step 8: Upload artifacts (CSV, PNG, logs)
       - name: Upload metrics/artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: metrics-artifacts
+          name: smart-energy-artifacts
           path: |
             rs485_logs/
             plots/
-            data/sample.csv
+            data/
