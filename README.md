@@ -4,9 +4,10 @@
 *Smart Energy Monitoring for Indian Hospitals*
 
 ## 📅 Project Timeline
-**Duration:** 10 August 2010 – 8 October  2010(Part-Time)  
-**Acadamic Year:** 1st year of Electrical and Electronics Engineering
-**Location:** VIT University, Vellore, India 
+
+- **Duration:** 10 August 2010 – 8 October  2010(Part-Time)  
+- **Acadamic Year:** 1st year of Electrical and Electronics Engineering
+- **Location:** VIT University, Vellore, India 
 
 
 
