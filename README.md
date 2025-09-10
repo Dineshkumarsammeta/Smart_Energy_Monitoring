@@ -4,7 +4,7 @@
 *Smart Energy Monitoring for Indian Hospitals*
 
 ## 📅 Project Timeline
-**Duration:** August 2010 – October  2010  
+**Duration:** August 2010 – October  2010(Part-Time)  
 **Location:** VIT University, Vellore, India 
 
 
@@ -13,28 +13,30 @@ Constructed a low-cost, Internet of Things-based system to monitor and optimise
 
 ⚠️ Disclaimer
 
+This project was originally built in 2010 as part of academic research at VIT University. which is part time project.
+In 2025, it has been refreshed for modernization and archival purposes — preserving the legacy work while adding reproducibility, documentation, and continuous integration (CI) examples.
+
 The RS485 serial communication code in this project communicates with particular hardware devices that are attached to a serial port (/dev/ttyUSB0).
 
 Crucial Information:
 
 For the code to function properly, an RS485 adapter or other appropriate device must be attached.
 
-Running this code in Continuous Integration (CI) will probably fail since CI systems, including GitHub Actions, are unable to access actual hardware.
+Running this code in Continuous Integration (CI) will likely fail since CI systems (including GitHub Actions) cannot access actual hardware.
 
-The repository is kept open to the public for demonstration and instructional purposes in order to highlight:
+The repository is kept open to highlight:
 
 Python (pyserial) handling of serial communication
 
 Methods for data gathering and logging
 
-Workflow example for tasks involving hardware
+Workflow examples for tasks involving hardware
 
 Suggestion:
 
-The script must be executed on a local computer with the relevant RS485 hardware attached in order to function properly.
+The script must be executed on a local machine with the relevant RS485 hardware attached in order to function properly.
 
-To replicate hardware input without the need for real devices, think about mocking the serial interface for automated runs or continuous integration testing.
-
+To replicate hardware input without requiring real devices, consider mocking the serial interface for automated runs or CI testing.
 ## 📊 Repository Health
 
 This project is under continuous improvement.  
