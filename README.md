@@ -3,6 +3,14 @@
 # Project Title
 *Smart Energy Monitoring for Indian Hospitals*
 
+**Modernisation note:** This project was originally built during my **first year (10 Aug 2010 – 8 Oct 2010, Part‑Time)** at **VIT University, Vellore, India**. In **September 2025**, I uploaded the code to GitHub and refreshed it to run on current tooling (Python 3.11, mocked RS‑485 tests, CI, and a metrics snapshot). **Commit dates reflect publication/cleanup, not the original build period.**
+
+**Academic Year:** 1st year of Electrical and Electronics Engineering  
+**Duration (visible on CV):** 10 Aug 2010 – 8 Oct 2010 **(Part‑Time)**
+
+### Metrics — quick snapshot
+A short, recruiter‑friendly snapshot is kept in **`metrics/metrics.csv`**. For fuller runs, use the `bench.csv` log and any plots in `plots/`.
+
 ## 📅 Project Timeline
 
 - **Duration:** 10 August 2010 – 8 October  2010(Part-Time)  
