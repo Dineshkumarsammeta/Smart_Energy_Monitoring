@@ -1,0 +1,1 @@
+docs+tests: smoke test, mock RS-485, BOM & wiring diagram; README modernisation block; metrics snapshot (prep v0.1.1)
