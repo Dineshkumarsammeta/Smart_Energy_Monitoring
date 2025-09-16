@@ -1,0 +1,6 @@
+metric,value
+samples_total,1200
+mean_load_kw,0.42
+peak_kw,1.85
+log_latency_p50_ms,45
+data_completeness_pct,98.7
